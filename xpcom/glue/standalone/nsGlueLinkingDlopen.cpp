@@ -228,7 +228,7 @@ XPCOMGlueLoad(const char *xpcomFile, GetFrozenFunctionsFunc *func)
 
             XPCOMGlueLoadDependentLibs(xpcomDir, ReadDependentCB);
 
-            snprintf(lastSlash, MAXPATHLEN - strlen(xpcomDir), " /" XUL_DLL);
+            snprintf(lastSlash, MAXPATHLEN - strlen(xpcomDir), "/" XUL_DLL);
 
             sXULLibHandle = dlopen(xpcomDir, RTLD_GLOBAL | RTLD_LAZY);
 
