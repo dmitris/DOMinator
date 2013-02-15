@@ -5,8 +5,7 @@
 #include "base/file_util.h"
 
 #include <fcntl.h>
-#ifndef OS_WIN
-// https://bugzilla.mozilla.org/show_bug.cgi?id=736765 - added unistd.h to avoid compile error (DS)
+#if defined(ANDROID) || defined(OS_POSIX)
 #include <unistd.h>
 #endif
 

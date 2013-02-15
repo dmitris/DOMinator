@@ -6,12 +6,11 @@
 
 #if defined(OS_WIN)
 #include <io.h>
-// commented out #if defined(ANDROID) to prevent the compile error 
-// due to undefine ftrunctate on Linux
-#else
-#include <unistd.h>
 #endif
 #include <stdio.h>
+#if defined(ANDROID) || defined(OS_POSIX)
+#include <unistd.h>
+#endif
 
 #include <fstream>
 

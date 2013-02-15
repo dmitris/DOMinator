@@ -3,9 +3,6 @@
 // found in the LICENSE file.
 
 #include "base/time.h"
-#ifndef OS_WIN
-#include <unistd.h>
-#endif
 
 #ifdef OS_MACOSX
 #include <mach/mach_time.h>
@@ -15,6 +12,10 @@
 #include <time64.h>
 #else
 #include <time.h>
+#endif
+
+#if defined(ANDROID) || defined(OS_POSIX)
+#include <unistd.h>
 #endif
 
 #include <limits>

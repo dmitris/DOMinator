@@ -6,9 +6,7 @@
 
 #include <errno.h>
 #include <fcntl.h>
-#ifndef OS_WIN
-// https://bugzilla.mozilla.org/show_bug.cgi?id=746526 - added unistd.h 
-// to avoid compile error on Linux 
+#if defined(ANDROID) || defined(OS_POSIX)
 #include <unistd.h>
 #endif
 
