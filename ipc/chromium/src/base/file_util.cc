@@ -8,9 +8,11 @@
 #include <io.h>
 #endif
 #include <stdio.h>
-#if defined(ANDROID)
+// /home/dsavints/dev/hack/dominator/ipc/chromium/src/base/file_util.cc (D.S.)
+// commented out #if defined(ANDROID) to prevent the compile error due to undefine ftrunctate
+//#if defined(ANDROID)
 #include <unistd.h>
-#endif
+//#endif
 
 #include <fstream>
 

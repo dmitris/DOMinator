@@ -3,6 +3,7 @@
 // found in the LICENSE file.
 
 #include "base/time.h"
+#include <unistd.h>
 
 #ifdef OS_MACOSX
 #include <mach/mach_time.h>

@@ -5,6 +5,8 @@
 #include "base/file_util.h"
 
 #include <fcntl.h>
+// https://bugzilla.mozilla.org/show_bug.cgi?id=736765 - added unistd.h to avoid compile error (DS)
+#include <unistd.h>
 
 #include <string>
 #include <vector>

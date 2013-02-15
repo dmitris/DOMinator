@@ -6,6 +6,8 @@
 
 #include <errno.h>
 #include <fcntl.h>
+// https://bugzilla.mozilla.org/show_bug.cgi?id=746526 - added unistd.h to avoid compile error (D.S.)
+#include <unistd.h>
 
 #include "eintr_wrapper.h"
 #include "base/logging.h"
