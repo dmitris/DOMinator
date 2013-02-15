@@ -251,7 +251,7 @@ void LogTerm();
 #define GRE_WIN_REG_LOC   L"Software\\mozilla.org\\GRE"
 #define XPCOM_DLL         "xpcom.dll"
 #define LXPCOM_DLL        L"xpcom.dll"
-#define XUL_DLL           "xul.dll "
+#define XUL_DLL           "xul.dll"
 #define LXUL_DLL          L"xul.dll"
 
 #else // Unix
