@@ -6,13 +6,12 @@
 
 #if defined(OS_WIN)
 #include <io.h>
+// commented out #if defined(ANDROID) to prevent the compile error 
+// due to undefine ftrunctate on Linux
+#else
+#include <unistd.h>
 #endif
 #include <stdio.h>
-// /home/dsavints/dev/hack/dominator/ipc/chromium/src/base/file_util.cc (D.S.)
-// commented out #if defined(ANDROID) to prevent the compile error due to undefine ftrunctate
-//#if defined(ANDROID)
-#include <unistd.h>
-//#endif
 
 #include <fstream>
 

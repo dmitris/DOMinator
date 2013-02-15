@@ -6,8 +6,11 @@
 
 #include <errno.h>
 #include <fcntl.h>
-// https://bugzilla.mozilla.org/show_bug.cgi?id=746526 - added unistd.h to avoid compile error (D.S.)
+#ifndef OS_WIN
+// https://bugzilla.mozilla.org/show_bug.cgi?id=746526 - added unistd.h 
+// to avoid compile error on Linux 
 #include <unistd.h>
+#endif
 
 #include "eintr_wrapper.h"
 #include "base/logging.h"
